@@ -50,7 +50,7 @@ We provide an example file including reference-point sites, `projects/conf/confi
 
 Then replace the `UPSTREAM` and `DOWNSTREAM` variables in `projects/conf/config` with distance (bp) upstream and downstream of the reference-point (such as TSS or TES) selected for meta-gene analysis, and replace the `REGION` variable with the length (bp) between `UPSTREAM` and `DOWNSTREAM`.
 
-run `projects/start.sh`, and it will automatically perform adaptor cutting, Alignment, meta-gene analysis and nucleotide frequencies analysis.
+Run `projects/start.sh`, and it will automatically perform adaptor cutting, Alignment, meta-gene analysis and nucleotide frequencies analysis.
 
 
 
