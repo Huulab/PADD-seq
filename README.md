@@ -41,7 +41,8 @@ run `projects/fastq/Check.sh` and get `projects/fastq/check.log` to verify the i
 
 Download the reference genome and build a reference genome index for the alignment program (bwa). 
 
-Edit the `projects/conf/config`, and replace the `hg38_FA` `hg38_INDEX_PATH` variables with the path of your reference genome and reference genome index, respectively. replace the `TSSDAT` variable with 
+Edit the `projects/conf/config`, and replace the `hg38_FA`, `hg38_INDEX_PATH` variables with the path of your reference genome and reference genome index, respectively. Replace the `TSSDAT` variable with the path of `Tssdat.txt` file in `projects/conf/`. Replace the `UPSTREAM`, `DOWNSTREAM` variables with distance upstream of the reference-point selected
+
 
 run `projects/start.sh` to perform Alignment.
 
