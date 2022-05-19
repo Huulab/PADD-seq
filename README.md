@@ -41,7 +41,9 @@ run `projects/fastq/Check.sh` and get `projects/fastq/check.log` to verify the i
 
 Download the reference genome and build a reference genome index for the alignment program (bwa). 
 
-Edit the `projects/conf/config`, and replace the `hg38_FA`, `hg38_INDEX_PATH` variables with the path of your reference genome and reference genome index, respectively. Replace the `TSSDAT` variable with the path of `Tssdat.txt` file in `projects/conf/`. Replace the `UPSTREAM`, `DOWNSTREAM` variables with distance upstream of the reference-point selected
+Edit the `projects/conf/config`, and replace the `hg38_FA`, `hg38_INDEX_PATH` variables with the path of your reference genome and reference genome index, respectively. Replace the `UPSTREAM` and `DOWNSTREAM` variables with distance (bp) upstream and downstream of the reference-point selected for meta-gene analysis and plotting, and replace the `REGION` variable with the length (bp) between `UPSTREAM` and `DOWNSTREAM`.
+
+Replace the `TSSDAT` variable with the path of `conf/Reference-point_site_Example.txt` file in `projects/conf/`
 
 The data structure of file `Reference-point_site_Example.txt` is shown below:
 | Gene ID | Chromasome | Reference-point site | Strand | Notes (optional) |
