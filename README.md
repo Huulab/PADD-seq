@@ -43,7 +43,7 @@ Download the reference genome and build a reference genome index for the alignme
 
 Edit the `projects/conf/config`, and replace the `hg38_FA`, `hg38_INDEX_PATH` variables with the path of your reference genome and reference genome index, respectively. Replace the `TSSDAT` variable with the path of `Tssdat.txt` file in `projects/conf/`. Replace the `UPSTREAM`, `DOWNSTREAM` variables with distance upstream of the reference-point selected
 
-The data structure of  is shown below:
+The data structure of file `Reference-point_site_Example.txt` is shown below:
 | Gene ID | Chromasome | Reference-point site | Strand | Notes (optional) |
 | :---: | :---: | :---: | :---: | :---: |
 | ENSG00000173193 | chr3 | 122680839 | + | 50001 |
