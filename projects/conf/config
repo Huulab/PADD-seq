@@ -1,7 +1,7 @@
 # Path
 hg38_FA="YOURPATH/Genomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGenomeFasta/genome.fa"
 hg38_INDEX_PATH="YOURPATH/Genomes/Homo_sapiens/UCSC/hg38/Sequence/BWAIndex/version0.6.0/genome.fa"
-TSSDAT="conf/BJ_hg38_FPKM-gt1_GeneDistance-gt2k_GeneLength-gt50k.TSSdat.txt"
+TSSDAT="conf/Reference-point_site_Example.txt"
 SCRIPTS="../scripts"
 
 # Vars
