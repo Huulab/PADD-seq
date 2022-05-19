@@ -1,9 +1,6 @@
 # Codes for PADD-seq
 This repository stores original codes used in ***Genome-wide mapping of protein-DNA damage interaction by PADD-seq***.
 
-## Data availability
-All raw sequencing data are available at NCBI Sequence Read Archive with BioProject ID [PRJNA*****](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA*****)
-
 ## Software Requiremnents
 
 ## Linux Tools
@@ -41,6 +38,12 @@ All raw sequencing data are available at NCBI Sequence Read Archive with BioProj
 You can download the raw sequencing data from [GEO](https://www.ncbi.nlm.nih.gov/geo/) under GSE**** to `projects/fastq/`.
 
 run `projects/fastq/Check.sh` and get `projects/fastq/check.log` to verify the integrity of downloaded files.
+
+Download the reference genome and build a reference genome index for the alignment program (bwa). 
+
+Edit the `projects/conf/config`, and replace the `hg38_FA` `hg38_INDEX_PATH` variables with the path of your reference genome and reference genome index, respectively. replace the `TSSDAT` variable with 
+
+run `projects/start.sh` to perform Alignment.
 
 
 
