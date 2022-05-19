@@ -6,7 +6,7 @@ All raw sequencing data are available at NCBI Sequence Read Archive with BioProj
 
 ## Software Requiremnents
 
-## Unix Tools
+## Linux Tools
 + snakemake >= 5.5.4
 + FastQC >= 0.11.9
 + bgzip >= 1.9
