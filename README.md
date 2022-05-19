@@ -39,20 +39,18 @@ You can download the raw sequencing data from [GEO](https://www.ncbi.nlm.nih.gov
 
 run `projects/fastq/Check.sh` and get `projects/fastq/check.log` to verify the integrity of downloaded files.
 
-Download the reference genome and build a reference genome index for the alignment program (bwa). 
+Download the reference genome and build a reference genome index for the alignment program (bwa). Edit the `projects/conf/config`, and replace the `hg38_FA`, `hg38_INDEX_PATH` variables with the path of your reference genome and reference genome index, respectively. 
 
-Edit the `projects/conf/config`, and replace the `hg38_FA`, `hg38_INDEX_PATH` variables with the path of your reference genome and reference genome index, respectively. Replace the `UPSTREAM` and `DOWNSTREAM` variables with distance (bp) upstream and downstream of the reference-point selected for meta-gene analysis and plotting, and replace the `REGION` variable with the length (bp) between `UPSTREAM` and `DOWNSTREAM`.
-
-Replace the `TSSDAT` variable with the path of `conf/Reference-point_site_Example.txt` file in `projects/conf/`
-
-The data structure of file `Reference-point_site_Example.txt` is shown below:
+We provide an example file including reference-point sites, `projects/conf/config/Reference-point_site_Example.txt`, which is used to perform meta-gene analysis. You can make your own files following the data structure and replace it. The data structure of the file is shown below:
 | Gene ID | Chromasome | Reference-point site | Strand | Notes (optional) |
 | :---: | :---: | :---: | :---: | :---: |
 | ENSG00000173193 | chr3 | 122680839 | + | 50001 |
 | ENSG00000112335 | chr6 | 108261246 | - | 50024 |
 | ... | ... | ... | ... | ... |
 
-run `projects/start.sh` to perform Alignment.
+Then replace the `UPSTREAM` and `DOWNSTREAM` variables in `projects/conf/config` with distance (bp) upstream and downstream of the reference-point (such as TSS or TES) selected for meta-gene analysis, and replace the `REGION` variable with the length (bp) between `UPSTREAM` and `DOWNSTREAM`.
+
+run `projects/start.sh` to perform Alignment and .
 
 
 
