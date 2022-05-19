@@ -49,6 +49,7 @@ The data structure of  is shown below:
 | ENSG00000173193 | chr3 | 122680839 | + | 50001 |
 | ENSG00000112335 | chr6 | 108261246 | - | 50024 |
 | ... | ... | ... | ... | ... |
+
 run `projects/start.sh` to perform Alignment.
 
 
