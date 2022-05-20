@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#usage: sbatch bwPlotCorrelation.sbatch <1.bed 2.bed 3.bed>
+#usage: bash plotCorrelationForBins.sh <1.bed 2.bed 3.bed 4.bed>
 
 #get scores
 multiBamSummary bins \
 	--bamfiles $1.sorted.bam $2.sorted.bam $3.sorted.bam $4.sorted.bam \
 	--outFileName sorted.bam.Scores_per_bin.npz \
-	--labels IS ID1 ID2 ID3 \
+	--labels data1 data2 data3 data4 \
 	--numberOfProcessors max \
 	--binSize 100000
 
