@@ -29,6 +29,9 @@ This repository stores original codes used in ***Genome-wide mapping of protein-
 + ggplot2 >= 3.3.0
 + stringr >= 1.4.0
 
+## Windows
++ IGV >=  2.9.2
+
 
 ---
 
@@ -51,13 +54,17 @@ We provide an example file including reference-point sites, `projects/conf/confi
 
 Then replace the `UPSTREAM` and `DOWNSTREAM` variables in `projects/conf/config` with distance (bp) upstream and downstream of the reference-point (such as TSS or TES) selected for meta-gene analysis, and replace the `REGION` variable with the length (bp) between `UPSTREAM` and `DOWNSTREAM`.
 
-Run `projects/start.sh`, and it will automatically perform adaptor cutting, Alignment, meta-gene analysis and nucleotide analysis. After completion, you will get `projects/DataExample.rawValue` file of meta gene analysis, and files in `projects/BaseCount/` of the nucleotide analysis.
+Run `projects/start.sh`, and it will automatically perform adaptor cutting, Alignment, meta-gene analysis and nucleotide analysis. 
 
-## 2. Plot strand-specific heatmap
+After completion, you will get `projects/DataExample.rawValue` file of meta gene analysis which can be used to plot meta-gene profile with `projects/plotProfileOfMeta-gene.R` in R, and files in `projects/BaseCount/` of the nucleotide analysis.
+
+## 2. Plot strand-specific heatmap and screenshot
 Run `projects/generateStrandSpecificBW.sh` to get the strand-specific bw files:
 ```
 bash generateStrandSpecificBW.sh DataExample.bed
 ```
+The files of `.forward.bw` and `.reverse.bw` can be used to plot screenshot in IGV.
+
 Run `projects/plotHeatmap.sh` to get the heatmap of template strand signal, `projects/DataExample.bed.TS.pdf`, and non-template strand signal, `projects/DataExample.bed.NTS.pdf`:
 ```
 bash plotHeatmap.sh DataExample.bed
