@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#usage: plotHeatmap.sh DataExample
+#usage: plotHeatmap.sh DataExample.bed
 
 #get template strand signal
 computeMatrix reference-point \
