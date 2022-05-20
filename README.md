@@ -58,7 +58,7 @@ Run `projects/generateStrandSpecificBW.sh` to get the strand-specific bw files:
 ```
 bash generateStrandSpecificBW.sh DataExample.bed
 ```
-Run `projects/plotHeatmap.sh` to get the heatmap of template strand signal, `projects/DataExample.bed.TS.pdf`, and non-template strand signal, projects/DataExample.bed.NTS.pdf``:
+Run `projects/plotHeatmap.sh` to get the heatmap of template strand signal, `projects/DataExample.bed.TS.pdf`, and non-template strand signal, projects/DataExample.bed.NTS.pdf`:
 ```
 plotHeatmap.sh DataExample.bed
 ```
