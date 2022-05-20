@@ -71,4 +71,17 @@ bash plotHeatmap.sh DataExample.bed
 ```
 
 ## 3. Analysis of sample correlations
+Run `projects/plotCorrelationForGenes.sh` to get the analysis result of sample correlations among active genes, `projects/correlationScatter.pdf`:
+```
+bash plotCorrelationForGenes.sh DataExample1.bed DataExample2.bed
+```
 
+Or run `projects/bed2bam.sh` and `projects/plotCorrelationForBins.sh` to get the analysis result of sample correlations for the entire genome, `correlationHeatmapPerBin.pdf`:
+```
+bash bed2bam.sh DataExample3.bed
+bash bed2bam.sh DataExample4.bed
+bash bed2bam.sh DataExample5.bed
+bash bed2bam.sh DataExample6.bed
+
+bash plotCorrelationForBins.sh DataExample3.bed DataExample4.bed DataExample5.bed DataExample6.bed
+```
