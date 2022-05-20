@@ -70,5 +70,5 @@ Run `projects/plotHeatmap.sh` to get the heatmap of template strand signal, `pro
 bash plotHeatmap.sh DataExample.bed
 ```
 
-## 3. Analyses of sample correlations
+## 3. Analysis of sample correlations
 
