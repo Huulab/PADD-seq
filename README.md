@@ -34,8 +34,9 @@ This repository stores original codes used in ***Genome-wide mapping of protein-
 
 # Workflow Example
 
-## 1. Quality Check and Alignment
+## 1. Quality Check, Alignment and meta-gene analysis
 You can download the raw sequencing data from [GEO](https://www.ncbi.nlm.nih.gov/geo/) under GSE**** to `projects/fastq/`.
+Here we use the data example file `projects/fastq/Sample_DataExample` to demonstrate the workflow.
 
 run `projects/fastq/Check.sh` and get `projects/fastq/check.log` to verify the integrity of downloaded files.
 
@@ -52,6 +53,11 @@ Then replace the `UPSTREAM` and `DOWNSTREAM` variables in `projects/conf/config`
 
 Run `projects/start.sh`, and it will automatically perform adaptor cutting, Alignment, meta-gene analysis and nucleotide frequencies analysis.
 
+## 2. Plot strand-specific heatmap
+Run `projects/generateStrandSpecificBW.sh`:
+```
+bash generateStrandSpecificBW.sh DataExample.BED
+```
 
 
 
