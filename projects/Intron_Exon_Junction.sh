@@ -7,8 +7,8 @@ do
 computeMatrix reference-point \
         --scoreFileName ${i}.sorted.bam.reverse.bw \
         --regionsFileName Ann_intron_out_for.bed \
-        --outFileName ${i}.forwardStrandExon_TSS_TS.Matrix.gz \
-        --outFileNameMatrix ${i}.forwardStrandExon_TSS_TS.tab \
+        --outFileName ${i}.forwardStrandIntron_TSS_TS.Matrix.gz \
+        --outFileNameMatrix ${i}.forwardStrandIntron_TSS_TS.tab \
         --referencePoint TSS \
         --beforeRegionStartLength 20 \
         --afterRegionStartLength 21 \
@@ -19,8 +19,8 @@ computeMatrix reference-point \
 computeMatrix reference-point \
        --scoreFileName ${i}.sorted.bam.forward.bw \
         --regionsFileName Ann_intron_out_res.bed \
-        --outFileName ${i}.reverseStrandExon_TSS_TS.Matrix.gz \
-        --outFileNameMatrix ${i}.reverseStrandExon_TSS_TS.tab \
+        --outFileName ${i}.reverseStrandIntron_TSS_TS.Matrix.gz \
+        --outFileNameMatrix ${i}.reverseStrandIntron_TSS_TS.tab \
         --referencePoint TSS \
         --beforeRegionStartLength 20 \
         --afterRegionStartLength 21 \
@@ -28,18 +28,15 @@ computeMatrix reference-point \
         --numberOfProcessors 10 \
         --binSize 1
 
-#merge matrix.gz files
-computeMatrixOperations rbind \
-        --matrixFile ${i}.forwardStrandExon_TSS_TS.Matrix.gz ${i}.reverseStrandExon_TSS_TS.Matrix.gz \
-        --outFileName ${i}.combinedExon_TSS_TS.Matrix.gz
+
 
 
 #get non-template strand signal
 computeMatrix reference-point \
         --scoreFileName ${i}.sorted.bam.reverse.bw \
         --regionsFileName Ann_intron_out_res.bed \
-        --outFileName ${i}.reverseStrandExon_TSS_NTS.Matrix.gz \
-        --outFileNameMatrix ${i}.reverseStrandExon_TSS_NTS.tab \
+        --outFileName ${i}.reverseStrandIntron_TSS_NTS.Matrix.gz \
+        --outFileNameMatrix ${i}.reverseStrandIntron_TSS_NTS.tab \
         --referencePoint TSS \
         --beforeRegionStartLength 20 \
         --afterRegionStartLength 21 \
@@ -49,26 +46,24 @@ computeMatrix reference-point \
 computeMatrix reference-point \
        --scoreFileName ${i}.sorted.bam.forward.bw \
         --regionsFileName Ann_intron_out_for.bed \
-        --outFileName ${i}.forwardStrandExon_TSS_NTS.Matrix.gz \
-        --outFileNameMatrix ${i}.forwardStrandExon_TSS_NTS.tab \
+        --outFileName ${i}.forwardStrandIntron_TSS_NTS.Matrix.gz \
+        --outFileNameMatrix ${i}.forwardStrandIntron_TSS_NTS.tab \
         --referencePoint TSS \
         --beforeRegionStartLength 20 \
         --afterRegionStartLength 21 \
         --missingDataAsZero \
         --numberOfProcessors 10 \
         --binSize 1
-#merge matrix.gz files
-computeMatrixOperations rbind \
-        --matrixFile ${i}.forwardStrandExon_TSS_NTS.Matrix.gz ${i}.reverseStrandExon_TSS_NTS.Matrix.gz \
-        --outFileName ${i}.combinedExon_TSS_NTS.Matrix.gz
+
+
 
 
 #get template strand signal
 computeMatrix reference-point \
         --scoreFileName ${i}.sorted.bam.reverse.bw \
         --regionsFileName Ann_intron_out_for.bed \
-        --outFileName ${i}.forwardStrandExon_TES_TS.Matrix.gz \
-        --outFileNameMatrix ${i}.forwardStrandExon_TES_TS.tab \
+        --outFileName ${i}.forwardStrandIntron_TES_TS.Matrix.gz \
+        --outFileNameMatrix ${i}.forwardStrandIntron_TES_TS.tab \
         --referencePoint TES \
         --beforeRegionStartLength 20 \
         --afterRegionStartLength 21 \
@@ -78,8 +73,8 @@ computeMatrix reference-point \
 computeMatrix reference-point \
        --scoreFileName ${i}.sorted.bam.forward.bw \
         --regionsFileName Ann_intron_out_res.bed \
-        --outFileName ${i}.reverseStrandExon_TES_TS.Matrix.gz \
-        --outFileNameMatrix ${i}.reverseStrandExon_TES_TS.tab \
+        --outFileName ${i}.reverseStrandIntron_TES_TS.Matrix.gz \
+        --outFileNameMatrix ${i}.reverseStrandIntron_TES_TS.tab \
         --referencePoint TES \
         --beforeRegionStartLength 20 \
         --afterRegionStartLength 21 \
@@ -87,18 +82,15 @@ computeMatrix reference-point \
         --numberOfProcessors 10 \
         --binSize 1
 
-#merge matrix.gz files
-computeMatrixOperations rbind \
-        --matrixFile ${i}.forwardStrandExon_TES_TS.Matrix.gz ${i}.reverseStrandExon_TES_TS.Matrix.gz \
-        --outFileName ${i}.combinedExon_TES_TS.Matrix.gz
+
 
 
 #get non-template strand signal
 computeMatrix reference-point \
         --scoreFileName ${i}.sorted.bam.reverse.bw \
         --regionsFileName Ann_intron_out_res.bed \
-        --outFileName ${i}.reverseStrandExon_TES_NTS.Matrix.gz \
-        --outFileNameMatrix ${i}.reverseStrandExon_TES_NTS.tab \
+        --outFileName ${i}.reverseStrandIntron_TES_NTS.Matrix.gz \
+        --outFileNameMatrix ${i}.reverseStrandIntron_TES_NTS.tab \
         --referencePoint TES \
         --beforeRegionStartLength 20 \
         --afterRegionStartLength 21 \
@@ -108,17 +100,13 @@ computeMatrix reference-point \
 computeMatrix reference-point \
        --scoreFileName ${i}.sorted.bam.forward.bw \
         --regionsFileName Ann_intron_out_for.bed \
-        --outFileName ${i}.forwardStrandExon_TES_NTS.Matrix.gz \
-        --outFileNameMatrix ${i}.forwardStrandExon_TES_NTS.tab \
+        --outFileName ${i}.forwardStrandIntron_TES_NTS.Matrix.gz \
+        --outFileNameMatrix ${i}.forwardStrandIntron_TES_NTS.tab \
         --referencePoint TES \
         --beforeRegionStartLength 20 \
         --afterRegionStartLength 21 \
         --missingDataAsZero \
         --numberOfProcessors 10 \
         --binSize 1
-#merge matrix.gz files
-computeMatrixOperations rbind \
-        --matrixFile ${i}.forwardStrandExon_TES_NTS.Matrix.gz ${i}.reverseStrandExon_TES_NTS.Matrix.gz \
-        --outFileName ${i}.combinedExon_TES_NTS.Matrix.gz
 
 done
