@@ -14,6 +14,7 @@ This repository stores original codes used in ***Genome-wide mapping of protein-
 + sambamba >= 0.8.1
 + bedtools >= 2.30.0
 + deeptools >= 3.5.1
++ MACS2 >= 2.2.7.1
 
 ### Python
 + Pyhton version >= 3.7.x
@@ -86,7 +87,11 @@ bash bed2bam.sh DataExample6.bed
 bash plotCorrelationForBins.sh DataExample3.bed DataExample4.bed DataExample5.bed DataExample6.bed
 ```
 
-
+### 4. Peak calling
+Perform peak calling using MACS2 with no model, 0 bp shift, and 0 bp extension option :
+```
+macs2 callpeak -t ChIP1.bed -c Input1.bed -g hs -p 0.01 -n ChIP --nomodel -f BED -B --SPMR
+```
 ---
 
 
