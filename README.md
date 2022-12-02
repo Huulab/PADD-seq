@@ -88,9 +88,9 @@ bash plotCorrelationForBins.sh DataExample3.bed DataExample4.bed DataExample5.be
 ```
 
 ### 4. Peak calling
-Perform peak calling using MACS2 with no model, 0 bp shift, and 0 bp extension option :
+Run `generate_bed.py` to get files in bed format for peak calling and perform peak calling using MACS2 with no model, 0 bp shift, and 0 bp extension option :
 ```
-macs2 callpeak -t ChIP1.bed -c Input1.bed -g hs -p 0.01 -n ChIP --nomodel -f BED -B --SPMR
+macs2 callpeak -t ChIP1.bed -c Input1.bed -g hs -p 0.01 -n ChIP1 --nomodel -f BED -B --SPMR
 ```
 ---
 
